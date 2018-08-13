@@ -1,7 +1,6 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('Web3');
 const { interface, bytecode } = require('./compile');
-const INITIAL_STRING = 'what up doe';
 const MNEMONIC = 'verify view whale gloom slow squeeze despair addict return rotate guard young';
 const RINKEBY = 'https://rinkeby.infura.io/v3/bcec170506334d53ad8215f9d8c97143';
 
@@ -19,4 +18,3 @@ const deploy = async () => {
         .send({ from: accounts[0], gas: '1000000' });
     console.log('Deployed to ', result.options.address);
 };
-deploy();
